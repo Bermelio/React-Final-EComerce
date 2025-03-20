@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import callApi from '../../services/products.js'
+import { callApi } from '../../services/products.js'
 import './articles.css'
 import ButtonBuy from "../buttonNav/buttonNav";
 import BuyNow from "../../assets/images/buy-me.png";
