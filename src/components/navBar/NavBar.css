@@ -1,0 +1,10 @@
+.NavContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.drawerButton
+{
+    padding: 25px;
+}
