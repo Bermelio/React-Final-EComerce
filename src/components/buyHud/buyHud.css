@@ -1,0 +1,26 @@
+
+.hudContainer{
+    display: flex;
+}
+
+.hudContainer p{
+    text-align: center;
+    font-size: 24px;
+}
+
+div .hudContainer{
+    justify-content: center;
+    align-items: center;
+}
+
+div .hudContainer button{
+    border-radius: 75%;
+    height: 40px;
+    width: 40px;
+}
+
+.stock{
+    width: 2em;
+    height: 2em;
+    text-align: justify;
+}

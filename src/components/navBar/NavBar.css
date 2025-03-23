@@ -12,3 +12,9 @@
 .EZDrawer .EZDrawer__container{
     background-color: rgba(225, 239, 247, 0.397)
 }
+
+.drawer{
+    width: 2.5em;
+    justify-content: center;
+    align-items: center;
+}

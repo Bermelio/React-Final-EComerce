@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { callApi } from '../../services/products.js'
 import './articles.css'
-import ButtonBuy from "../buttonNav/buttonNav";
+// import ButtonBuy from "../buttonNav/buttonNav";
+// import BuyNow from "../../assets/images/carro-vacio.png";
 import ButtonDetails from "../buttonNav/buttonNav";
-import BuyNow from "../../assets/images/carro-vacio.png";
 import Details from "../../assets/images/detailButton.png";
 import { Link } from 'react-router-dom';
 
@@ -36,7 +36,7 @@ useEffect(()=>{
                     <div className='buyButton'>
                         {/* <ButtonBuy src={BuyNow} alt='Buy button' /> */}
                         <Link to={`/products/${articles?.id}`}>
-                            <ButtonDetails src={Details} alt='Details button' />
+                            <ButtonDetails class='Icons' src={Details} alt='Details button' />
                         </Link>
                     </div>
                     </li>
