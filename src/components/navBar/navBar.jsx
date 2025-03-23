@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import homeIcon from "../../assets/images/buy-home.png";
 import menuIcon from "../../assets/images/menu.png";
+import cartNumber from '../../assets/images/buy-me.png'
 import ButtonMain from "../buttonNav/buttonNav";
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
@@ -34,12 +35,15 @@ export default function NavBar() {
         open={isOpen}
         onClose={toggleDrawer}
         direction='right'
-        className='bla bla bla'
+        className='drawer'
         size={350}
+        // style={"backgroun:rgba(90, 89, 89, 0.25)"}
       >
         <div>
           <ul>
-            <li>Carrito N°</li>
+            <Link to='/checkout'>
+              <ButtonMain className='cartNoti' src={cartNumber} alt='button cart notification'></ButtonMain>
+            </Link>
             <li>Catogorias</li>
             <li>Ayuda</li>
             <li>Servicio al Cliente</li>

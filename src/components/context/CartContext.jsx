@@ -1,4 +1,4 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 
 export default CartContext = createContext(false);
 
@@ -6,5 +6,11 @@ export default CartContext = createContext(false);
 //si uno se llama context el otro se llama provider
 
 export function CartProvider({children}){
+    const [cart, setCart] = useState([])
 
+    return (
+        <CartContext.Provider value={[cart, setCart]}> 
+        {children}
+        </CartContext.Provider>
+    )
 }

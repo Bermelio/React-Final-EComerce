@@ -7,7 +7,7 @@ export async function callApi(){
         }
 
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         return data;
 
     }
@@ -26,7 +26,7 @@ export async function callEspecific(id){
         }
 
         const data = await res.json();
-        console.log(data);
+        // console.log(data);
         return data;
 
     }

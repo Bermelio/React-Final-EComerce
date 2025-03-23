@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react'
 import { callEspecific } from '../../services/products.js'
+import './moreDetails.css'
 
 export default function moreDetails(){
     const {id} = useParams();
@@ -12,10 +13,19 @@ export default function moreDetails(){
 
     return (
         <>
-            <section>
-                <h1>More Details</h1>
-                <h3>{product?.title}</h3>
+            <section className="moreDetails">
+                <h1 className="title">More Details of {product?.title}</h1>
+                <div className="conteinerDet">
+                    <img
+                            src={product?.image}
+                            alt={product?.description}
+                            />
+                </div>
+                <div className="text">
+                    <p>{product?.description} - ${product?.price}</p>
+                </div>
             </section>
+            
         </>
     )
 }

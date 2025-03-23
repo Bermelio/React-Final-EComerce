@@ -23,9 +23,10 @@
     gap: 1rem;
     box-shadow: 0 0 10px 10px rgba(0, 0, 0, .1);
     border-radius: 4px;
-    background: #111;
+    background: #0000004d;
     color: #fff;
     padding: 1rem;
+    justify-content: space-between;
 }
 
 .articles h3 {
@@ -46,11 +47,27 @@
     background: #fff;
 }
 
+.buyButton {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div .buyButton{
+    justify-content: end;
+}
+
 .buyButton button img{
     display: flex;
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     object-fit: cover;
-    justify-content: right;
+    justify-content: center;
 
+}
+
+.moreDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

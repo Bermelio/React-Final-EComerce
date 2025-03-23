@@ -8,3 +8,7 @@
 {
     padding: 25px;
 }
+
+.EZDrawer .EZDrawer__container{
+    background-color: rgba(225, 239, 247, 0.397)
+}
