@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import './checkout.css'
 
 export default function Checkout() {
     const [cart] = useContext(CartContext);
@@ -10,9 +11,9 @@ export default function Checkout() {
             {cart.length === 0 ? (
                 <h3>Tu carrito está vacío 😢</h3>
             ) : (
-                <ul>
+                <ul className="checkoutContainer">
                     {cart.map((item, index) => (
-                    <div key={index}>
+                    <div key={index} className="productCheckout">
                         <h2>{item.product.title}</h2>
                         <img
                         src={item.product.image}
