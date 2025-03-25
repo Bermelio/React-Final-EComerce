@@ -1,17 +1,34 @@
 import { useContext } from "react";
 import { CartContext } from "../context/CartContext";
+import { db } from "../firebase/firebase";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import './checkout.css'
 
 export default function Checkout() {
     const [cart] = useContext(CartContext);
-    const totalPrice = cart.reduce((total, item) => {
-        const price = parseFloat(item.product.price);
-        return total + price;
-    }, 0);
     
-    const handleClick = () => {
-        alert('Gracias por tu compra!')
-        alert('El monto total de tu compra es de $' + totalPrice)
+    const handleClick = async () => {
+        try {
+            const totalPrice = cart.reduce((total, item) => {
+                const price = parseFloat(item.product.price);
+                return total + price;
+            }, 0);
+            const docRef = await addDoc(collection(db, "compras"), {
+                items: cart.map(item => ({
+                    title: item.product.title,
+                    price: item.product.price,
+                    image: item.product.image,
+                })),
+                total: totalPrice,
+                fecha: serverTimestamp(),
+            });
+
+            console.log("Compra registrada con ID:", docRef.id);
+            alert(`¡Compra exitosa! Total: $${totalPrice.toFixed(2)}`);
+        } catch (error) {
+            console.error("Error al guardar la compra:", error);
+            alert("Hubo un error al procesar tu compra.");
+        }
     }
     return (
         <section className="checkoutContainer">
