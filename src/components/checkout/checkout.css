@@ -1,10 +1,25 @@
+
+
 .checkoutContainer{
+    color:antiquewhite; 
+}
+
+.checkoutList{
     display: flex;
     flex-direction: column;
+    font-size: small;
+}
+.checkoutList p{
+    display: flex;
+    padding: 3me;
+    margin-right: 8em;
+    justify-content: center;
+    align-items: center;
 }
 
 .productCheckout{
     display: flex;
+    justify-content: space-between
 }
 
 .productCheckout img{
