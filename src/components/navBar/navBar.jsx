@@ -42,15 +42,21 @@ export default function NavBar() {
         size={350}
         // style={"backgroun:rgba(90, 89, 89, 0.25)"}
       >
-        <div>
+        <div className='ul_container'>
           <ul>
-
+            <Link to='/login'>  
+              <li>
+                Login
+              </li>
+            </Link>
+            <div className='containerNotification'>
             <Link to='/checkout'>
-              <p>{cart.length}</p>
+              <p className='notification'>{cart.length}</p>
               <ButtonMain miClase='drawer' src={cartNumber} alt='button cart notification'></ButtonMain>
             </Link>
+            </div>
 
-            <li>Catogorias</li>
+            <li>Catogory</li>
             <li>Ayuda</li>
             <li>Servicio al Cliente</li>
           </ul>

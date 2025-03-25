@@ -18,3 +18,32 @@
     justify-content: center;
     align-items: center;
 }
+
+.containerNotification{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification{
+    display: flex;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    top: 24px;
+    left: 10px;
+    font-size: 20px;
+}   
+
+div ul li{
+    list-style-type: none;
+    font-size: 20px;
+}
+
+.ul_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
