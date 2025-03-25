@@ -10,11 +10,11 @@ export default function BuyHud(){
     return(
         <>  
             <div className="hudContainer">
-                <ButtonsHud class='stock' src={chevron} alt='stock minus/plus stock'/>
+                <ButtonsHud clase='stock' src={chevron} alt='stock minus/plus stock'/>
                 <p>0</p>
-                <ButtonsHud class='stock' src={chevron} alt='stock minus/plus stock'/>
+                <ButtonsHud clase='stock' src={chevron} alt='stock minus/plus stock'/>
                 <div className="contenedor">
-                <a class="btn" href="#">Buy NOW!</a>
+                    <a class="btn" href="#">Buy NOW!</a>
                 </div>
             </div>
         </>

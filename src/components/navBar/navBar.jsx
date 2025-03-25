@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import homeIcon from "../../assets/images/buy-home.png";
 import menuIcon from "../../assets/images/menu.png";
 import cartNumber from '../../assets/images/buy-me.png'
@@ -7,8 +7,11 @@ import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import './NavBar.css';
 import { Link } from 'react-router-dom';
+import { CartContext } from '../context/CartContext';
 
 export default function NavBar() {
+  const [cart, setCart] = useContext(CartContext);
+
   const [isOpen, setIsOpen] = useState(false);
   
   const toggleDrawer = () => {
@@ -19,16 +22,16 @@ export default function NavBar() {
     <div className="NavContainer">
       <div className='drawerButton'>
         <Link to='/'>
-          <ButtonMain class='Icons' src={homeIcon} alt='Home button function'/>
+          <ButtonMain clase='Icons' src={homeIcon} alt='Home button function'/>
         </Link>
       </div>
 
       <div className='drawerButton'>
-        <h1>Profesional Stooore</h1>
+        <h1>Profesional Store</h1>
       </div>
       
       <div className='drawerButton' onClick={toggleDrawer}>
-        <ButtonMain class='Icons' src={menuIcon} alt='Menu button function'/>
+        <ButtonMain clase='Icons' src={menuIcon} alt='Menu button function'/>
       </div>
 
       <Drawer
@@ -41,9 +44,12 @@ export default function NavBar() {
       >
         <div>
           <ul>
+
             <Link to='/checkout'>
-              <ButtonMain class='drawer' src={cartNumber} alt='button cart notification'></ButtonMain>
+              <p>{cart.length}</p>
+              <ButtonMain clase='drawer' src={cartNumber} alt='button cart notification'></ButtonMain>
             </Link>
+
             <li>Catogorias</li>
             <li>Ayuda</li>
             <li>Servicio al Cliente</li>

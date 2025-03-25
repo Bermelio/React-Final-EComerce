@@ -36,7 +36,7 @@ useEffect(()=>{
                     <div className='buyButton'>
                         {/* <ButtonBuy src={BuyNow} alt='Buy button' /> */}
                         <Link to={`/products/${articles?.id}`}>
-                            <ButtonDetails class='Icons' src={Details} alt='Details button' />
+                            <ButtonDetails clase='Icons' src={Details} alt='Details button' />
                         </Link>
                     </div>
                     </li>
