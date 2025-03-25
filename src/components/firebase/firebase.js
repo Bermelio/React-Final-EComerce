@@ -18,4 +18,13 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+const db = getFirestore(app);
+const storage = getStorage(app);
+
+export async function getOrders(){
+    const orders = collection(db, 'orders');
+    const ordersSnapshot = await getDocs(orders);
+    const ordersList = ordersSnapshot.docs.map(doc => doc.data());
+    return ordersList;
+}
