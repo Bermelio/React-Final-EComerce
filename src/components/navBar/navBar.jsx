@@ -22,7 +22,7 @@ export default function NavBar() {
     <div className="NavContainer">
       <div className='drawerButton'>
         <Link to='/'>
-          <ButtonMain clase='Icons' src={homeIcon} alt='Home button function'/>
+          <ButtonMain miClase='Icons' src={homeIcon} alt='Home button function'/>
         </Link>
       </div>
 
@@ -31,7 +31,7 @@ export default function NavBar() {
       </div>
       
       <div className='drawerButton' onClick={toggleDrawer}>
-        <ButtonMain clase='Icons' src={menuIcon} alt='Menu button function'/>
+        <ButtonMain miClase='Icons' src={menuIcon} alt='Menu button function'/>
       </div>
 
       <Drawer
@@ -47,7 +47,7 @@ export default function NavBar() {
 
             <Link to='/checkout'>
               <p>{cart.length}</p>
-              <ButtonMain clase='drawer' src={cartNumber} alt='button cart notification'></ButtonMain>
+              <ButtonMain miClase='drawer' src={cartNumber} alt='button cart notification'></ButtonMain>
             </Link>
 
             <li>Catogorias</li>

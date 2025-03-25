@@ -28,7 +28,7 @@ export default function moreDetails(){
                 <div>
                     <p>Stock avaible: 300</p>
                 </div>
-            <BuyHud/>
+            <BuyHud product={product}/>
             </section>
         </>
     )

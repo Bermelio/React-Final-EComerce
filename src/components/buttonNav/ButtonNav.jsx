@@ -4,7 +4,7 @@ export default function ButtonNav(props){
     return (
         <>
         <button >
-            <img className={props.clase} src={props.src} alt={props.alt} />
+            <img className={props.miClase} src={props.src} alt={props.alt} />
         </button>
         </>
     )
