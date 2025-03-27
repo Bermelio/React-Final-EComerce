@@ -5,7 +5,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import './checkout.css'
 
 export default function Checkout() {
-    const [cart] = useContext(CartContext);
+    const [cart, , , deleteFromCart] = useContext(CartContext);
     
     const handleClick = async () => {
         try {
@@ -30,6 +30,7 @@ export default function Checkout() {
             alert("Hubo un error al procesar tu compra.");
         }
     }
+
     return (
         <section className="checkoutContainer">
             <h1>🛍️ Ultimos pasos</h1>
@@ -38,14 +39,17 @@ export default function Checkout() {
             ) : (
                 <ul className="checkoutList">
                     {cart.map((item, index) => (
-                        <div key={index} className="productCheckout">
+                    <span key={index} className="productCheckout">
                         <h2>{item.product.title}</h2>
-                        <img
-                        src={item.product.image}
-                        alt={item.product.description}
-                        />
+                            <img
+                            src={item.product.image}
+                            alt={item.product.description}
+                            />
                         <p>Precio: ${item.product.price}</p>
-                    </div>
+                        <div className="delete">
+                            <button onClick={() => deleteFromCart(index)}>X</button>
+                        </div>
+                    </span>
                     
                 ))}
                     <div className="contenedor">

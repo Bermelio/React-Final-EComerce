@@ -1,14 +1,20 @@
 
-
 .checkoutContainer{
-    color:antiquewhite; 
+    color:antiquewhite;
+    min-height: 100vh; /* Ocupa toda la pantalla */
+    width: 100%;
 }
 
 .checkoutList{
     display: flex;
     flex-direction: column;
     font-size: small;
+    padding: 5px;
+    margin: 10px;
+    gap: 24px;
+    border-radius: 10px;
 }
+
 .checkoutList p{
     display: flex;
     padding: 3me;
@@ -28,4 +34,13 @@
     border-radius: 10px;
     margin: 10px;
     object-fit: contain;
+}
+
+.checkoutContainer ul span{
+    border: 1px solid #68656563;
+    background-color: rgba(34, 30, 30, 0.26);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    
 }
