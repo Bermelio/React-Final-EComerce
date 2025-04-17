@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import homeIcon from "../../assets/images/buy-home.png";
 import menuIcon from "../../assets/images/menu.png";
 import cartNumber from '../../assets/images/buy-me.png'
-import ButtonMain from "../buttonNav/buttonNav";
+import ButtonMain from "../ButtonNav/ButtonNav";
 import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 import './NavBar.css';

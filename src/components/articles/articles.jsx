@@ -3,7 +3,7 @@ import { callApi } from '../../services/products.js'
 import './articles.css'
 // import ButtonBuy from "../buttonNav/buttonNav";
 // import BuyNow from "../../assets/images/carro-vacio.png";
-import ButtonDetails from "../buttonNav/buttonNav";
+import ButtonDetails from "../ButtonNav/ButtonNav.jsx";
 import Details from "../../assets/images/detailButton.png";
 import { Link } from 'react-router-dom';
 

@@ -1,4 +1,4 @@
-import ButtonsHud from "../buttonNav/buttonNav";
+import ButtonsHud from "../ButtonNav/ButtonNav";
 import chevron from '../../assets/images/up-down.png'
 import './buyHud.css'
 import { useContext } from "react";
